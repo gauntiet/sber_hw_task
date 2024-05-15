@@ -6,11 +6,13 @@ from deposit_calculator import DepositCalculator
 
 
 NAME = __file__.split("/",)[-1].split(".")[0]
+
 logging.basicConfig(
     filename=f"{NAME}.log",
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
     level=logging.INFO)
+
 app = Flask(NAME)
 
 

@@ -1,0 +1,13 @@
+[Unit]
+Description=deposit_calculator
+
+[Service]
+WorkingDirectory=/deposit_calculator
+ExecStart=/bin/python3 deposit_calculator_app.py
+ExecReload=/bin/kill -SIGTERM $MAINPID
+ExecStop=/bin/kill -SIGINT $MAINPID
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

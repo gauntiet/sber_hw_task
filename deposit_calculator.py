@@ -97,6 +97,3 @@ if __name__ == "__main__":
     deposit_dict, validation_msg = deposit_calculator.calculate_deposit()
     for key in deposit_dict:
         print(f"{key}: {deposit_dict[key]}")
-    
-
-            
